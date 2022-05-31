@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body><div class=" w-full h-screen flex justify-center items-center flex-col">
+    <h2 style="text-align: center;" class=" font-bold text-3xl">Counter</h2>
+    <div class="flex justify-center font-bold text-2xl">
+        <h4 id="value">0</h4>
+    </div> 
+    <div class="flex ">
+            <button class="btn bg-green-400 hover:bg-green-500 px-3 py-1 mx-1 my-2 text-white font-bold rounded-lg" id="+">Increase</button>
+            <button class="btn bg-gray-400 hover:bg-gray-500 px-3 py-1 mx-1 my-2 text-white font-bold rounded-lg" id="=">Reset</button>
+            <button class="btn bg-red-400 hover:bg-red-500 px-3 py-1 mx-1 my-2 text-white font-bold rounded-lg" id="-">Decrease</button>
+        </div>
+</div>
+<script>
+    value = 0;
+    var plus = document.getElementById("+");
+    var minuse = document.getElementById("-");
+    var equal = document.getElementById("=");
+    plus.addEventListener('click', ()=>{
+        value += 1;
+        document.getElementById('value').innerHTML = value;
+    });
+    minuse.addEventListener('click', ()=>{
+        value -= 1;
+        document.getElementById('value').innerHTML = value;
+    });
+    equal.addEventListener('click', ()=>{
+        value = 0;
+        document.getElementById('value').innerHTML = value;
+    });
+</script>
+</body>
+</html>
